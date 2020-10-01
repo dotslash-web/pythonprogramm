@@ -1,12 +1,14 @@
-n=int(nput("enter the value of 'n':)
-a=0
-b=1
-sum=0
-count=1
-print("fibonacci;" , end ="")
-while(count<=n)
-print(sum, end=" ")
-count+=1
-a=b
-b=sum
-sum=a+b
+n = int(input("Number of terms you want to print: "))
+a = 0
+b = 1
+c = 0
+
+if n <= 0:
+    print("Enter valid positive number")
+else:
+    print(a,b,end= " ")
+    for i in range(2,n):
+        c = a + b
+        print(c,end = " ")
+        a = b
+        b = c
